@@ -23,37 +23,58 @@ public class Main
 		NumberFormat format=NumberFormat.getCurrencyInstance(Locale.US);
 
 		//Processing
-				System.out.println("***Snack Bar***");
-				System.out.println();
+		System.out.println("***Snack Bar***");
+		System.out.println();
+		System.out.println("Customer Init");
+		System.out.println();
+		System.out.println("Name: "+cust1.getName()+"\tCash: $"+format.format(cust1.getCashOnHand()));
+		System.out.println("Name: "+cust2.getName()+"\tCash: $"+format.format(cust1.getCashOnHand()));
+		System.out.println();
+		System.out.println("Snack Init");
+		System.out.println();
+		System.out.println("There are "+snack1.getQuantity()+" "+snack1.getName()+"s at "+format.format(snack1.getCost())+" each.");
+		System.out.println("There are "+snack2.getQuantity()+" "+snack2.getName()+"s at "+format.format(snack2.getCost())+" each.");
+		System.out.println("There are "+snack3.getQuantity()+" "+snack3.getName()+"s at "+format.format(snack3.getCost())+" each.");
+		System.out.println("There are "+snack4.getQuantity()+" "+snack4.getName()+"s at "+format.format(snack4.getCost())+" each.");
+		System.out.println("There are "+snack5.getQuantity()+" "+snack5.getName()+"s at "+format.format(snack5.getCost())+" each.");
+		System.out.println();
+		System.out.println("***Transactions***");
+		System.out.println();
 		//Customer 1 buys 3 of snack 4. Print Customer 1 Cash on hand. Print quantity of snack 4.
-		System.out.println("Name: "+cust1.getName()+"\tCash: $"+format.format(cust1.getCashOnHand())+"\tSnack: "+snack4.getName()+": "+snack4.getQuantity());
+		System.out.println("Jane buys 3 Sodas");
 		customerBuy(3,cust1,snack4);
-		System.out.println("Name: "+cust1.getName()+"\tCash: $"+format.format(cust1.getCashOnHand())+"\tSnack: "+snack4.getName()+": "+snack4.getQuantity());
+		System.out.println("Name: "+cust1.getName()+"\tCash: $"+format.format(cust1.getCashOnHand())+"\t"+snack4.getName()+" Inventory: "+snack4.getQuantity());
 		System.out.println();
 		//Customer 1 buys 1 of snack 3. Print Customer 1 Cash on hand. Print quantity of snack 3.
+		System.out.println("Jane buys 1 Pretzel");
 		customerBuy(1,cust1,snack3);
-		System.out.println("Name: "+cust1.getName()+"\tCash: "+format.format(cust1.getCashOnHand())+"\tSnack: "+snack3.getName()+": "+snack3.getQuantity());
+		System.out.println("Name: "+cust1.getName()+"\tCash: "+format.format(cust1.getCashOnHand())+"\t"+snack3.getName()+" Inventory: "+snack3.getQuantity());
 		System.out.println();		
 		//Customer 2 buys 2 of snack 4. Print Customer 2 Cash on Hand. Print quantity of snack 4.
-		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\tSnack: "+snack4.getName()+": "+snack4.getQuantity());
+		System.out.println("Bob buys 2 Sodas");
+		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\t"+snack4.getName()+" Inventory: "+snack4.getQuantity());
 		customerBuy(2,cust2,snack4);
-		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\tSnack: "+snack4.getName()+": "+snack4.getQuantity());
+		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\t"+snack4.getName()+" Inventory: "+snack4.getQuantity());
 		System.out.println();		
 		//Customer 1 finds $10. Print Customer 1 Cash on Hand.
+		System.out.println("Jane finds $10");
 		cust1.addCash(10);
 		System.out.println("Name: "+cust1.getName()+"\tCash: "+format.format(cust1.getCashOnHand()));
 		System.out.println();		
 		//Customer 1 buys 1 of snack 2. Print Customer 1 Cash on Hand. Print quantity of snack 2.
+		System.out.println("Jane buys 1 Chocolate Bar");
 		customerBuy(1,cust1,snack2);
-		System.out.println("Name: "+cust1.getName()+"\tCash: "+format.format(cust1.getCashOnHand())+"\tSnack: "+snack2.getName()+": "+snack2.getQuantity());
+		System.out.println("Name: "+cust1.getName()+"\tCash: "+format.format(cust1.getCashOnHand())+"\t"+snack2.getName()+" Inventory: "+snack2.getQuantity());
 		System.out.println();
 		//Add 12 more items to snack 3. Print quantity of snack 3.
+		System.out.println("Restock 12 Pretzels");
 		snack3.addQuantity(12);
 		System.out.println("Name: "+snack3.getName()+"\tQuantity: "+snack3.getQuantity());
 		System.out.println();
 		//Customer 2 buys 3 of snack 3. Print Customer 2 Cash on hand. Print quantity of snack 3.
+		System.out.println("Bob buys 3 Pretzels");
 		customerBuy(3,cust2,snack3);
-		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\tSnack: "+snack3.getName()+": "+snack3.getQuantity());
+		System.out.println("Name: "+cust2.getName()+"\tCash: "+format.format(cust2.getCashOnHand())+"\t"+snack3.getName()+" Inventory: "+snack3.getQuantity());
 		System.out.println();
 		//Snack Inventory
 
